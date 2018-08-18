@@ -1,7 +1,6 @@
-# SPVA
+# movie-details-finder
 
-UNDER CONSTRUCTION
-wait for details..
+A simple restful app which you can see some details about movies via searching by title.
 
 > A Vue.js project
 
