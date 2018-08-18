@@ -1,27 +1,37 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+    <search v-on:searchMovie="searchMovie"/>
+    <movie-details :movie=movie />
   </div>
 </template>
 
 <script>
+import search from './components/search'
+import movieDetails from './components/movie-details'
+
 export default {
   name: 'app',
+  components: { search, movieDetails },
   data () {
     return {
-      msg: 'A cool app is coming!'
+      movie: null
     }
-  }
+  },
+  methods: {
+    searchMovie: function (query) {
+      fetch(`http://www.omdbapi.com/?t=${query}&apikey=c5d05685`)
+      .then((response) => { return response.json() })
+      .then((response) => { this.$set(this, 'movie', response);})
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
