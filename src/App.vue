@@ -40,4 +40,10 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
+
+footer {
+  position: absolute;
+  bottom: 25px;
+  margin: 0 auto;
+}
 </style>
