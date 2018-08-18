@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     searchMovie: function (query) {
-      fetch(`http://www.omdbapi.com/?t=${query}&apikey=c5d05685`)
+      fetch(`https://www.omdbapi.com/?t=${query}&apikey=c5d05685`)
       .then((response) => { return response.json() })
       .then((response) => { this.$set(this, 'movie', response);})
     }

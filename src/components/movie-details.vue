@@ -1,7 +1,7 @@
 <template>
   <div class="movie-details">
     <div class="movie-not-found" v-if="movie.Error">
-      <h2>{{ movie.Error }}</h2>
+      <h2 v-text="movie.Error"></h2>
     </div>
     <div v-else>
       <h1>{{ movie.Title }}</h1>
@@ -33,8 +33,8 @@
 <script>
 export default {
   props: { 
-    'movie' : null
-    }
+    'movie' : {}
+    },
 }
 </script>
 
