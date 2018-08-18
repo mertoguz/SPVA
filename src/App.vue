@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+    <h1>MOVIE DETAILS FINDER</h1>
     <search v-on:searchMovie="searchMovie"/>
     <movie-details :movie=movie />
   </div>
@@ -37,5 +38,6 @@ export default {
 }
 h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 </style>

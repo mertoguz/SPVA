@@ -1,6 +1,5 @@
 <template>
 <div class="search">
-    <h1>WELCOME TO MOVIE DETAILS FINDER</h1>
     <div class="search-box">
       <input type="text" placeholder="Search a movie by name" v-model="query" @keypress.enter="searchMovie"/>
       <button @click="searchMovie">Search</button>
@@ -35,13 +34,12 @@ export default {
     padding: 5px 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    height: 20px;
   }
 
   button {
     border: 1px solid #ccc;
     border-radius: 5px;
-    height: 30px;
+    height: 34px;
     background-color: chocolate;
     color: #fff;
   }  
