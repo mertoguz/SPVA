@@ -2,7 +2,8 @@
 
 A simple restful app which you can see some details about movies via searching by title.
 
-> A Vue.js project
+> Please taste it through https://mertoguz.github.io/movie-details-finder/ :)
+
 
 ## Build Setup
 
